@@ -2,6 +2,10 @@ require('dotenv').config()
 const contentful = require('contentful')
 
 export default {
+  env: {
+      CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+      CTF_CD_ACCESS_TOKEN: process.env.CTF_CD_ACCESS_TOKEN
+  },
   mode: 'spa',
   /*
   ** Headers of the page
