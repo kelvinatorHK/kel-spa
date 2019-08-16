@@ -2,7 +2,7 @@
   <div>
     <h1 class="site-title">
         <nuxt-link :to="{ path: '/' }" class="site-title__link">
-            Kel branch
+            Kel branch 2
         </nuxt-link>
     </h1>
     <nuxt />
