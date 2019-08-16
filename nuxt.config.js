@@ -80,6 +80,7 @@ export default {
       return client.getEntries({
           content_type: 'blogPost'
       }).then((response) => {
+          console.log('Got response');
           return response.items.map(entry => {
               return {
                   route: entry.fields.slug,
