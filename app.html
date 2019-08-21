@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
+    <script>if (!window.customElements) { document.write('<!--'); }</script>
+    <script src="https://dev.nuskin.com/content/developers/custom-elements-es5-adapter.js"></script>
+    <!-- do not remove -->
+    <script src="https://dev.nuskin.com/content/developers/webcomponents-lite.js"></script>
+    <script src="https://dev.nuskin.com/content/developers/vendor.bundle.js"></script>
+    <script src=""></script>
+    <script src="https://dev.nuskin.com/content/developers/aem.bundle.js"></script>
+    <link rel="stylesheet" href="https://dev.nuskin.com/content/developers/aem-bundle.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script>
+      nuskin.init({
+          country: "US",
+          baseUrl: "https://test.nuskin.com",
+          language: "en"
+      });
+    </script>
+
+  </head>
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+  </body>
+</html>
