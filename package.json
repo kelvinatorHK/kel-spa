@@ -8,7 +8,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "serve": "nuxt generate; cd dist; serve -p 8000"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
