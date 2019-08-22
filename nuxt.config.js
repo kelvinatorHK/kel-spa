@@ -6,7 +6,7 @@ export default {
       CTF_SPACE_ID: process.env.CTF_SPACE_ID,
       CTF_CD_ACCESS_TOKEN: process.env.CTF_CD_ACCESS_TOKEN
   },
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
