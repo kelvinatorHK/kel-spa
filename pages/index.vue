@@ -18,6 +18,7 @@ export default {
         }
     },
     async fetch({ store, params }) {
+        console.log('In fetch, params:', params);
         await store.dispatch('posts/getPosts', params.slug)
     }
 }
