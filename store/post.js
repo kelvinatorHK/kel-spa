@@ -17,6 +17,7 @@ export const mutations = {
 
 export const actions = {
     async getPostBySlug({commit}, slug) {
+        /*
         commit('setLoading', true);
         const response = await client.getEntries({
             content_type: 'blogPost',
@@ -24,5 +25,23 @@ export const actions = {
         })
         commit('setCurrentPost', response.items[0])
         commit('setLoading', false)
+        */
+
+
+        console.log('getPostBySlug:', slug);
+        commit('setLoading', true);
+
+        const response = await this.$axios.$get('http://localhost:4502/content/we-retail/api/blog.model.json');
+        //console.log('response:', response);
+        let vArray = Object.values(response[':items']['root'][':items']);
+        let results = vArray.filter(function (entry) {
+            return (entry.elements.slug.value === slug);
+        });
+        // we should have only one result
+        if (results.length > 0) {
+            commit('setCurrentPost', results[0]);
+        }
+        commit('setLoading', false);
+
     }
 }

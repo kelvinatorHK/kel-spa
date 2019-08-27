@@ -3,7 +3,7 @@
     <h2>Latest posts</h2>
     <ul>
         <li v-if="posts" v-for="(post, index) in posts" :key="index">
-            <nuxt-link :to="post.fields.slug">{{post.fields.description}}</nuxt-link>
+            <nuxt-link :to="post.elements.slug.value">{{post.elements.description.value}}</nuxt-link>
         </li>
     </ul>
 </div>
@@ -13,11 +13,12 @@
 export default {
     computed: {
         posts() {
-            console.log(this.$store.state.posts.posts[0].fields);
+            //console.log(this.$store.state.posts.posts[0].fields);
             return this.$store.state.posts.posts
         }
     },
     async fetch({ store, params }) {
+        console.log('params:', params);
         await store.dispatch('posts/getPosts', params.slug)
     }
 }
